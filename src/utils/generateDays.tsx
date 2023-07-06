@@ -1,35 +1,46 @@
-import { addDays, format, isLeapYear, isPast, isToday } from "date-fns";
+import { addDays, format, isPast, isToday } from "date-fns";
 import { days } from "../days";
 
-interface DateObject {
+interface DayObject {
   date: string;
-  url: string | null;
   past: boolean;
   today: boolean;
-  summary: string | null;
+  birthday: boolean;
+  url?: string;
+  summary?: string;
 }
 
-function generateDateArray(): DateObject[] {
+function generateDateArray(): DayObject[] {
   const startDate = new Date("1991-02-27");
   const endDate = addDays(startDate, 85 * 365); // Add 85 years worth of days
 
-  const dateArray: DateObject[] = [];
+  const dateArray: DayObject[] = [];
 
   let currentDate = startDate;
   while (currentDate <= endDate) {
+    const humanReadableDate = format(new Date(currentDate), "do MMMM yyyy");
     const dateString = format(currentDate, "yyyy-MM-dd");
     const past = isPast(currentDate);
     const today = isToday(currentDate);
-    const url: string | null = dateString in days ? days[dateString].url : null;
-    const summary: string | null =
-      dateString in days ? days[dateString].summary : null;
+    const day = currentDate.getDate();
+    const month = currentDate.getMonth() + 1;
+    const birthday = day === 27 && month === 2;
 
-    dateArray.push({ date: dateString, url, past, today, summary });
+    const url: string | undefined =
+      dateString in days ? days[dateString].url : undefined;
+    const summary: string | undefined =
+      dateString in days ? days[dateString].summary : undefined;
+
+    dateArray.push({
+      date: humanReadableDate,
+      url,
+      past,
+      today,
+      summary,
+      birthday,
+    });
 
     currentDate = addDays(currentDate, 1); // Move to the next day
-    if (isLeapYear(currentDate)) {
-      currentDate = addDays(currentDate, 1); // If it's a leap year, add an extra day
-    }
   }
 
   return dateArray;

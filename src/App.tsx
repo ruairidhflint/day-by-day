@@ -27,6 +27,7 @@ function App() {
               url={day.url}
               today={day.today}
               summary={day.summary}
+              birthday={day.birthday}
             />
           );
         })}
