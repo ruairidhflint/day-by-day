@@ -1,5 +1,40 @@
-const days: { [key: string]: string } = {
-  "1991-02-27": "/1991-02-27",
-};
+const days: { [key: string]: { url: string | null; summary: string | null } } =
+  {
+    "1991-02-27": { url: null, summary: "Born in London, England." },
+    "1992-02-27": { url: null, summary: "1st Birthday" },
+    "1993-02-27": { url: null, summary: "2nd Birthday" },
+    "1994-02-27": { url: null, summary: "3rd Birthday" },
+    "1995-02-27": { url: null, summary: "4th Birthday" },
+    "1996-02-27": { url: null, summary: "5th Birthday" },
+    "1997-02-27": { url: null, summary: "6th Birthday" },
+    "1998-02-27": { url: null, summary: "7th Birthday" },
+    "1999-02-27": { url: null, summary: "8th Birthday" },
+    "2000-02-27": { url: null, summary: "9th Birthday" },
+    "2001-02-27": { url: null, summary: "10th Birthday" },
+    "2002-02-27": { url: null, summary: "11th Birthday" },
+    "2003-02-27": { url: null, summary: "12th Birthday" },
+    "2004-02-27": { url: null, summary: "13th Birthday" },
+    "2005-02-27": { url: null, summary: "14th Birthday" },
+    "2006-02-27": { url: null, summary: "15th Birthday" },
+    "2007-02-27": { url: null, summary: "16th Birthday" },
+    "2008-02-27": { url: null, summary: "17th Birthday" },
+    "2009-02-27": { url: null, summary: "18th Birthday" },
+    "2010-02-27": { url: null, summary: "19th Birthday" },
+    "2011-02-27": { url: null, summary: "20th Birthday" },
+    "2012-02-27": { url: null, summary: "21st Birthday" },
+    "2013-02-27": { url: null, summary: "22nd Birthday" },
+    "2014-02-27": { url: null, summary: "23rd Birthday" },
+    "2015-02-27": { url: null, summary: "24th Birthday" },
+    "2016-02-27": { url: null, summary: "25th Birthday" },
+    "2017-02-27": { url: null, summary: "26th Birthday" },
+    "2018-02-27": { url: null, summary: "27th Birthday" },
+    "2019-02-27": { url: null, summary: "28th Birthday" },
+    "2020-02-27": { url: null, summary: "29th Birthday" },
+    "2021-02-27": { url: null, summary: "30th Birthday" },
+    "2022-02-27": { url: null, summary: "31st Birthday" },
+    "2023-02-27": { url: null, summary: "32nd Birthday" },
+    "2021-08-07": { url: "/gello", summary: "Married to Rebecca" },
+    "2023-07-06": { url: "/today", summary: null },
+  };
 
 export { days };

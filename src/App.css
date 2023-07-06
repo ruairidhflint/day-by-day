@@ -1,6 +1,6 @@
 .circle-grid {
-  padding: 3px;
+  padding: 8px;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(10px, 1fr));
-  grid-gap: 3px;
+  grid-template-columns: repeat(auto-fill, minmax(11px, 1fr));
+  grid-gap: 2px;
 }

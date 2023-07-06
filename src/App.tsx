@@ -4,22 +4,34 @@ import "./App.css";
 import { addDays, isLeapYear, format, isPast, isToday } from "date-fns";
 import { days } from "./days";
 
-function Circle({ url, date, today, past }: any) {
+interface CircleProps {
+  url: string | null;
+  date: string;
+  today: boolean;
+  past: boolean;
+  summary: string | null;
+}
+
+function Circle({ url, date, today, past, summary }: CircleProps) {
   const divStyle = {
-    width: "12px",
-    height: "12px",
-    background: url ? "orange" : past ? "darkgray" : "lightgray",
+    width: "11px",
+    height: "11px",
+    background: url || summary ? "#EF4444" : past ? "#A1A1AA" : "#E4E4E7",
     MozBorderRadius: "50px",
     WebkitBorderRadius: "50px",
     borderRadius: "50px",
   };
 
+  const reversedDate: string = date.split("-").reverse().join("-");
+
   if (url) {
     return (
-      <a href={url as string} target="_blank" rel="noopener noreferrer">
+      <a href={url} target="_blank" rel="noopener noreferrer">
         <div
           data-tooltip-id="my-tooltip"
-          data-tooltip-content={date as string}
+          data-tooltip-content={
+            summary ? `${reversedDate}: ${summary}` : reversedDate
+          }
           id={today ? "today" : undefined}
           style={divStyle}
         ></div>
@@ -30,7 +42,9 @@ function Circle({ url, date, today, past }: any) {
   return (
     <div
       data-tooltip-id="my-tooltip"
-      data-tooltip-content={date as string}
+      data-tooltip-content={
+        summary ? `${reversedDate}: ${summary}` : reversedDate
+      }
       id={today ? "today" : undefined}
       style={divStyle}
     ></div>
@@ -43,6 +57,7 @@ function App() {
     url: string | null;
     past: boolean;
     today: boolean;
+    summary: string | null;
   }
 
   function generateDateArray(): DateObject[] {
@@ -56,9 +71,12 @@ function App() {
       const dateString = format(currentDate, "yyyy-MM-dd");
       const past = isPast(currentDate);
       const today = isToday(currentDate);
-      const url: string | null = dateString in days ? days[dateString] : null;
+      const url: string | null =
+        dateString in days ? days[dateString].url : null;
+      const summary: string | null =
+        dateString in days ? days[dateString].summary : null;
 
-      dateArray.push({ date: dateString, url, past, today });
+      dateArray.push({ date: dateString, url, past, today, summary });
 
       currentDate = addDays(currentDate, 1); // Move to the next day
       if (isLeapYear(currentDate)) {
@@ -93,6 +111,7 @@ function App() {
               past={day.past}
               url={day.url}
               today={day.today}
+              summary={day.summary}
             />
           );
         })}
