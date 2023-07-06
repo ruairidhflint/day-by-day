@@ -1,6 +1,12 @@
-.circle-grid {
+.day-grid {
   padding: 8px;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(11px, 1fr));
   grid-gap: 2px;
+}
+
+.day {
+  width: 11px;
+  height: 11px;
+  border-radius: 50px;
 }

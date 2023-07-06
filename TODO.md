@@ -1,4 +1,4 @@
-- Get under source contol
+- Get under source contol ✅
 - Separate into cleaner file structure
 - Get test deployment via netlify
 - Make list of things I want to actually log
