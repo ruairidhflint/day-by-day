@@ -10,13 +10,12 @@ interface CircleProps {
 const Day = ({ url, date, today, past, summary, birthday }: CircleProps) => {
   const divStyle = {
     background:
-      birthday && past
-        ? "#60A5FA"
-        : url || summary
-        ? "#EF4444"
+      (birthday || url || summary) && past
+        ? "#262626"
         : past
         ? "#CECECE"
         : "#F4F4F5",
+    borderRadius: (birthday || url || summary) && past ? "0px" : "50%",
   };
 
   if (url) {
