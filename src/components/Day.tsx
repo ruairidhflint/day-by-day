@@ -13,7 +13,7 @@ const Day = ({ url, date, today, past, summary, birthday }: CircleProps) => {
       (birthday || url || summary) && past
         ? "#262626"
         : today
-        ? "#F97316"
+        ? "#FB923C"
         : past
         ? "#CECECE"
         : "#F4F4F5",
@@ -24,9 +24,13 @@ const Day = ({ url, date, today, past, summary, birthday }: CircleProps) => {
     return (
       <a href={url} target="_blank" rel="noopener noreferrer">
         <div
-          data-tooltip-id="my-tooltip"
-          data-tooltip-content={
-            today ? `${date}: Today!` : summary ? `${date}: ${summary}` : date
+          data-tooltip-id="tooltip"
+          data-tooltip-html={
+            today
+              ? `${date}: Today!`
+              : summary
+              ? `${date}: <br /> ${summary}`
+              : date
           }
           id={today ? "today" : undefined}
           className="day"
@@ -38,9 +42,13 @@ const Day = ({ url, date, today, past, summary, birthday }: CircleProps) => {
 
   return (
     <div
-      data-tooltip-id="my-tooltip"
-      data-tooltip-content={
-        today ? `${date}: Today!` : summary ? `${date}: ${summary}` : date
+      data-tooltip-id="tooltip"
+      data-tooltip-html={
+        today
+          ? `${date}: Today!`
+          : summary
+          ? `${date}: <br /> ${summary}`
+          : date
       }
       id={today ? "today" : undefined}
       className="day"

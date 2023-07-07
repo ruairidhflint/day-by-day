@@ -9,12 +9,8 @@ const Header = ({ scrollToToday }: { scrollToToday: () => void }) => {
         85 years old. This project was inspired by Buster Benson's{" "}
         <a href="https://busterbenson.com/life-in-weeks" target="_blank">
           Life in Weeks
-        </a>
-        ,{" "}
-        <a href="https://sonnet.io/" target="_blank">
-          Rafał Pastuszak
-        </a>
-        , and a{" "}
+        </a>{" "}
+        and a{" "}
         <a
           href="https://waitbutwhy.com/2014/05/life-weeks.html"
           target="_blank"

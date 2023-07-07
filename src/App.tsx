@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 import { Tooltip } from "react-tooltip";
 import "./App.css";
 import Day from "./components/Day";
@@ -34,7 +34,7 @@ function App() {
           );
         })}
       </div>
-      <Tooltip id="my-tooltip" />
+      <Tooltip id="tooltip" />
     </>
   );
 }

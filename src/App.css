@@ -187,7 +187,7 @@ button {
 }
 
 .day-grid {
-  padding: 0 20%;
+  padding: 0 20% 100px 20%;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(10px, 1fr));
   grid-gap: 8px;
@@ -197,4 +197,9 @@ button {
   width: 10px;
   height: 10px;
   border-radius: 50px;
+}
+
+#tooltip {
+  font-family: "Open Sans", sans-serif;
+  text-align: center;
 }
