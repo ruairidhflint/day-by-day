@@ -15,7 +15,7 @@ const Day = ({ url, date, today, past, summary, birthday }: CircleProps) => {
         : today
         ? "#FB923C"
         : past
-        ? "#CECECE"
+        ? "#bfbfbf"
         : "#F4F4F5",
     borderRadius: (birthday || url || summary) && past ? "0px" : "50%",
   };
