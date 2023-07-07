@@ -18,12 +18,13 @@ function App() {
   };
 
   return (
-    <>
+    <div className="container">
       <Header scrollToToday={scrollToToday} />
       <div className="day-grid" ref={dotContainerRef}>
-        {days.map((day) => {
+        {days.map((day, i) => {
           return (
             <Day
+              key={i}
               date={day.date}
               past={day.past}
               url={day.url}
@@ -35,7 +36,7 @@ function App() {
         })}
       </div>
       <Tooltip id="tooltip" />
-    </>
+    </div>
   );
 }
 
