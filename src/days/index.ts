@@ -36,6 +36,9 @@ const days: { [key: string]: { url?: string; summary?: string } } = {
   "2018-03-14": {
     summary: "Read 'Yes Man' by Danny Boyle. Changes everything.",
   },
+  "1994-04-24": {
+    summary: "My brother was born",
+  },
   "2018-06-24": {
     summary: "First tattoo",
   },
@@ -65,6 +68,7 @@ const days: { [key: string]: { url?: string; summary?: string } } = {
   "2022-06-06": { summary: "Start work at Tipalti" },
   "2022-01-15": { summary: "See Hak Baker perform live" },
   "2022-04-23": { summary: "Honeymoon to Thailand 🇹🇭" },
+  "2023-01-05": { summary: "Found out Rebecca was pregnant" },
   "2023-02-07": { summary: "My father passes away" },
   "2023-07-06": { summary: "This project is launched" },
 };
