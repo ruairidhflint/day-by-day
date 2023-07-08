@@ -39,6 +39,12 @@ const days: { [key: string]: { url?: string; summary?: string } } = {
   "1994-04-24": {
     summary: "My brother was born",
   },
+  "1996-01-04": {
+    summary: "Start Primary School",
+  },
+  "2002-09-03": {
+    summary: "Start Secondary School",
+  },
   "2018-06-24": {
     summary: "First tattoo",
   },
