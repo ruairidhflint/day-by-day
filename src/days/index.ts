@@ -34,7 +34,7 @@ const days: { [key: string]: { url?: string; summary?: string } } = {
   "2023-02-27": { summary: "32nd Birthday 🎉" },
   "2008-07-14": { summary: "Start dating Rebecca" },
   "2018-03-14": {
-    summary: "Read 'Yes Man' by Danny Boyle. Changes everything.",
+    summary: "Read 'Yes Man' by Danny Wallace. Changes everything.",
   },
   "1994-04-24": {
     summary: "My brother was born",
