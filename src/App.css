@@ -128,6 +128,16 @@ table {
   border-spacing: 0;
 }
 
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+:root {
+  --color-dark: #3f3f46;
+  --color-light: #f4f4f5;
+  --color-black: #262626;
+}
+
 .container {
   padding: 0 20%;
 }
@@ -140,7 +150,6 @@ table {
 
 .header {
   padding: 50px 0 60px 0;
-  font-family: "Open Sans", sans-serif;
 }
 
 h1 {
@@ -151,7 +160,7 @@ h1 {
 p {
   font-size: 1.1rem;
   line-height: 1.6rem;
-  color: #3f3f46;
+  color: var(--color-dark);
 }
 
 a {
@@ -166,7 +175,7 @@ a {
 .bar {
   height: 12px;
   width: 100%;
-  background-color: #f4f4f5;
+  background-color: var(--color-light);
   border-radius: 10px;
 }
 
@@ -176,12 +185,12 @@ a {
   left: 0;
   width: 0%;
   height: 12px;
-  background-color: #262626;
+  background-color: var(--color-black);
   border-radius: 10px;
 }
 
 h2 {
-  color: #3f3f46;
+  color: (--color-dark);
   margin-top: 20px;
   text-align: center;
 }
@@ -210,6 +219,5 @@ button {
 }
 
 #tooltip {
-  font-family: "Open Sans", sans-serif;
   text-align: center;
 }
