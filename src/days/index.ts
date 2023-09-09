@@ -77,6 +77,9 @@ const days: { [key: string]: { url?: string; summary?: string } } = {
   "2023-01-05": { summary: "Found out Rebecca was pregnant" },
   "2023-02-07": { summary: "My father passes away" },
   "2023-07-06": { summary: "This project is launched" },
+  "2023-09-07": {
+    summary: "Elijah Flint is born. 7lbs 5oz and a full head of hair",
+  },
 };
 
 export { days };
