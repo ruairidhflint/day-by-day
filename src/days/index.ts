@@ -80,6 +80,9 @@ const days: { [key: string]: { url?: string; summary?: string } } = {
   "2023-09-07": {
     summary: "Elijah Flint is born. 7lbs 5oz and a full head of hair",
   },
+  "2023-10-18": {
+    summary: "Launch Great Books project (books.rory.codes)",
+  },
 };
 
 export { days };
