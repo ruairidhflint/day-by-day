@@ -1,37 +1,31 @@
+function generatePastBirthdays() {
+  const birthYear = 1991 + 1;
+  const birthMonth = 2;
+  const birthDay = 27;
+
+  const today = new Date();
+  const birthdays: Record<string, { summary: string }> = {};
+
+  for (let year = birthYear; year <= today.getFullYear(); year++) {
+    const birthday = new Date(year, birthMonth - 1, birthDay);
+    if (birthday <= today) {
+      const key = `${year}-${String(birthMonth).padStart(2, "0")}-${String(
+        birthDay
+      ).padStart(2, "0")}`;
+      const age = year - birthYear + 1;
+      birthdays[key] = {
+        summary: `${age}${
+          age === 1 ? "st" : age === 2 ? "nd" : age === 3 ? "rd" : "th"
+        } Birthday 🎉`,
+      };
+    }
+  }
+
+  return birthdays;
+}
 const days: { [key: string]: { url?: string; summary?: string } } = {
   "1991-02-27": { summary: "Born in London, England" },
-  "1992-02-27": { summary: "1st Birthday 🎉" },
-  "1993-02-27": { summary: "2nd Birthday 🎉" },
-  "1994-02-27": { summary: "3rd Birthday 🎉" },
-  "1995-02-27": { summary: "4th Birthday 🎉" },
-  "1996-02-27": { summary: "5th Birthday 🎉" },
-  "1997-02-27": { summary: "6th Birthday 🎉" },
-  "1998-02-27": { summary: "7th Birthday 🎉" },
-  "1999-02-27": { summary: "8th Birthday 🎉" },
-  "2000-02-27": { summary: "9th Birthday 🎉" },
-  "2001-02-27": { summary: "10th Birthday 🎉" },
-  "2002-02-27": { summary: "11th Birthday 🎉" },
-  "2003-02-27": { summary: "12th Birthday 🎉" },
-  "2004-02-27": { summary: "13th Birthday 🎉" },
-  "2005-02-27": { summary: "14th Birthday 🎉" },
-  "2006-02-27": { summary: "15th Birthday 🎉" },
-  "2007-02-27": { summary: "16th Birthday 🎉" },
-  "2008-02-27": { summary: "17th Birthday 🎉" },
-  "2009-02-27": { summary: "18th Birthday 🎉" },
-  "2010-02-27": { summary: "19th Birthday 🎉" },
-  "2011-02-27": { summary: "20th Birthday 🎉" },
-  "2012-02-27": { summary: "21st Birthday 🎉" },
-  "2013-02-27": { summary: "22nd Birthday 🎉" },
-  "2014-02-27": { summary: "23rd Birthday 🎉" },
-  "2015-02-27": { summary: "24th Birthday 🎉" },
-  "2016-02-27": { summary: "25th Birthday 🎉" },
-  "2017-02-27": { summary: "26th Birthday 🎉" },
-  "2018-02-27": { summary: "27th Birthday 🎉" },
-  "2019-02-27": { summary: "28th Birthday 🎉" },
-  "2020-02-27": { summary: "29th Birthday 🎉" },
-  "2021-02-27": { summary: "30th Birthday 🎉" },
-  "2022-02-27": { summary: "31st Birthday 🎉" },
-  "2023-02-27": { summary: "32nd Birthday 🎉" },
+  ...generatePastBirthdays(),
   "2008-07-14": { summary: "Start dating Rebecca" },
   "2018-03-14": {
     summary: "Read 'Yes Man' by Danny Wallace. Changes everything.",
