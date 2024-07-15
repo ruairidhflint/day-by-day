@@ -77,6 +77,15 @@ const days: { [key: string]: { url?: string; summary?: string } } = {
   "2023-10-18": {
     summary: "Launch Great Books project (books.rory.codes)",
   },
+  "2024-06-16": {
+    summary: "Flat sold and offer accepted on a new home",
+  },
+  "2024-04-12": {
+    summary: "Pass driving test 🚗",
+  },
+  "2024-07-01": {
+    summary: "Promoted to Senior Software Engineer at Tipalti",
+  },
 };
 
 export { days };
