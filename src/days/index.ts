@@ -86,6 +86,9 @@ const days: { [key: string]: { url?: string; summary?: string } } = {
   "2024-07-01": {
     summary: "Promoted to Senior Software Engineer at Tipalti",
   },
+  "2024-09-07": {
+    summary: "Elijah's first birthday",
+  },
 };
 
 export { days };
