@@ -92,6 +92,12 @@ const days: { [key: string]: { url?: string; summary?: string } } = {
   "2024-09-22": {
     summary: "Elijah sleeps through the night.",
   },
+  "2025-06-12": {
+    summary: "Found out Rebecca is pregnant again.",
+  },
+  "2025-07-13": {
+    summary: "Found we are expecting twins.",
+  },
 };
 
 export { days };
