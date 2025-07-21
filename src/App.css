@@ -113,3 +113,75 @@ button {
 #tooltip {
   text-align: center;
 }
+
+/* anner Styles */
+.banner {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  display: flex;
+  width: 100%;
+  max-width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(to right, #eef2ff, #f5f3ff);
+  padding: 12px 24px;
+  font-family: sans-serif;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.banner-spacer {
+  flex: 1;
+}
+
+.banner-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #312e81;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.banner-link:hover {
+  color: #4338ca;
+}
+
+.banner-download {
+  border-radius: 9999px;
+  background-color: #c7d2fe;
+  padding: 4px 10px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #312e81;
+}
+
+.banner-dismiss {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.banner-dismiss-button {
+  background: none !important;
+  border: none !important;
+  padding: 0 !important;
+  font: inherit !important;
+  color: #312e81 !important;
+  text-decoration: none !important;
+  cursor: pointer !important;
+  transition: color 0.2s !important;
+}
+
+.banner-dismiss-button:hover {
+  color: #4338ca !important;
+}
+
+.banner-dismiss-icon {
+  height: 20px;
+  width: 20px;
+}
