@@ -98,6 +98,12 @@ const days: { [key: string]: { url?: string; summary?: string } } = {
   "2025-07-13": {
     summary: "Found we are expecting twins.",
   },
+  "2025-09-23": {
+    summary: "It's a boy and a girl!",
+  },
+  "2026-01-05": {
+    summary: "Promoted to Engineering Manager at Tipalti",
+  },
 };
 
 export { days };
