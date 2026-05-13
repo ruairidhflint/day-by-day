@@ -10,13 +10,14 @@ const Header = ({ scrollToToday }: { scrollToToday: () => void }) => {
         passed, while the lighter greys represent the days yet to come. A black
         square signifies a noteworthy day, and some of them include links for
         further reading. This project was inspired by Buster Benson's{" "}
-        <a href="https://busterbenson.com/life-in-weeks" target="_blank">
+        <a href="https://busterbenson.com/life-in-weeks" target="_blank" rel="noopener noreferrer">
           Life in Weeks
         </a>{" "}
         and a{" "}
         <a
           href="https://waitbutwhy.com/2014/05/life-weeks.html"
           target="_blank"
+          rel="noopener noreferrer"
         >
           blog post
         </a>{" "}
