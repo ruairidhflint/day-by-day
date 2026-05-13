@@ -104,6 +104,9 @@ const days: { [key: string]: { url?: string; summary?: string } } = {
   "2026-01-05": {
     summary: "Promoted to Engineering Manager at Tipalti",
   },
+    "2026-01-22": {
+    summary: "Evelyn and Arthur are born healthy and happy.",
+  },
 };
 
 export { days };
