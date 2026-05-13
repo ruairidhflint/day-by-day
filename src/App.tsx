@@ -4,8 +4,6 @@ import "./App.css";
 import Day from "./components/Day";
 import { generateDateArray } from "./utils/generateDays";
 import Header from "./components/Header";
-import Banner from "./components/Banner";
-
 function App() {
   const days = generateDateArray();
 
@@ -20,7 +18,6 @@ function App() {
 
   return (
     <>
-      <Banner />
       <div className="container">
         <Header scrollToToday={scrollToToday} />
         <div className="day-grid" ref={dotContainerRef}>
