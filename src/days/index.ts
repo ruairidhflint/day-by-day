@@ -13,10 +13,20 @@ function generatePastBirthdays() {
         birthDay
       ).padStart(2, "0")}`;
       const age = year - birthYear + 1;
+      const lastTwo = age % 100;
+      const lastOne = age % 10;
+      const suffix =
+        lastTwo >= 11 && lastTwo <= 13
+          ? "th"
+          : lastOne === 1
+          ? "st"
+          : lastOne === 2
+          ? "nd"
+          : lastOne === 3
+          ? "rd"
+          : "th";
       birthdays[key] = {
-        summary: `${age}${
-          age === 1 ? "st" : age === 2 ? "nd" : age === 3 ? "rd" : "th"
-        } Birthday 🎉`,
+        summary: `${age}${suffix} Birthday 🎉`,
       };
     }
   }
